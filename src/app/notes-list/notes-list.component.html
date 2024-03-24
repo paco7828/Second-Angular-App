@@ -1,0 +1,12 @@
+<div class="notes-div">
+    @if(notes.length === 0){
+        <h1>No notes...</h1>
+    }
+    @for(note of notes; track note.id){
+    <div class="note">
+        <h2>{{note.title}}</h2>
+        <p>{{note.description}}</p>
+        <button (click)="removeNote($event)">X</button>
+    </div>
+    }
+</div>
